@@ -1,0 +1,18 @@
+.cursor {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease;
+    z-index: 9999;
+    fill: black !important;
+  }
+  
+  .path1{
+    fill: linear-gradient(180deg, #E01979 13.09%, #C625C0 111.93%, #100D7A 111.94%) !important;
+  }
+
+
+
+
