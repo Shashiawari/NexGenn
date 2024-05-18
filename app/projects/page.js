@@ -23,7 +23,7 @@ const page = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_139_7)">
+              <g clipPath="url(#clip0_139_7)">
                 <path
                   d="M497.956 65.9127L488.838 650.017H483.152L122.183 299.34V639.621H0V20.0417H6.00722L366.119 370.076L374.915 78.6666L497.848 65.9127H497.956Z"
                   fill="#231F20"
@@ -50,7 +50,7 @@ const page = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-          <label class="hamburger">
+          <label className="hamburger">
           <input type="checkbox"/>
           <svg viewBox="0 0 32 32">
             <path className="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
@@ -131,6 +131,7 @@ const page = () => {
             <img
               src="https://res.cloudinary.com/dq7brjjnz/image/upload/v1715749135/2ec1a020-92c0-4c29-b036-1078327e0d10.png"
               className="img-fluid"
+              alt="img"
             ></img>
             <p className="mt-3">Portfolios</p>
           </div>
@@ -139,6 +140,7 @@ const page = () => {
             <img
               src="https://marketplace.canva.com/EAFBL8KRmSA/1/0/1131w/canva-white-simple-student-cv-resume-NXs7xSf0K8I.jpg"
               className="img-fluid"
+              alt="img"
             ></img>
             <p className="mt-3">Resume</p>
           </div>
@@ -147,6 +149,7 @@ const page = () => {
             <img
               src="https://res.cloudinary.com/dq7brjjnz/image/upload/v1715751260/53297d93-898f-427b-b955-bc73a979a6b3.png"
               className="img-fluid"
+              alt="img"
             ></img>
             <p className="mt-3">Buisness</p>
           </div>
@@ -154,6 +157,7 @@ const page = () => {
             <img
               src="https://res.cloudinary.com/dq7brjjnz/image/upload/v1715751501/e179651c-7c9b-4095-8c89-1ff3d7a03095.png"
               className="img-fluid"
+              alt="img"
             ></img>
             <p className="mt-3"> college projects</p>
           </div>
