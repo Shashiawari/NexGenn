@@ -43,9 +43,9 @@ const CustomCursor3 = () => {
             y2="42.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.0289996" stop-color="#03EBFA" />
-            <stop offset="0.9999" stop-color="#1D0DD3" />
-            <stop offset="1" stop-color="#7009D7" />
+            <stop offset="0.0289996" stopColor="#03EBFA" />
+            <stop offset="0.9999" stopColor="#1D0DD3" />
+            <stop offset="1" stopColor="#7009D7" />
           </linearGradient>
         </defs>
       </svg>
