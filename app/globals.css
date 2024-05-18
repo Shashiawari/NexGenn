@@ -95,7 +95,7 @@ button.navbar-toggler.ml-auto.hidden-sm-up.float-xs-right:focus {
   font-size: 1200px;
   color: #00000099;
 }
-@media (max-width: 2000px) {
+@media (max-width: 1400px) {
   .overlay h1 {
     font-family: lemon_milk_R;
     font-size: 1400px;
