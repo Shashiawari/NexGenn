@@ -64,7 +64,9 @@
 .line-top-bottom2 {
   stroke-dasharray: 12 63;
 }
-
+.navbar {
+  z-index: 1000; /* Ensure navbar is on top */
+}
 button.navbar-toggler.ml-auto.hidden-sm-up.float-xs-right:focus {
   outline: none!important;
 }

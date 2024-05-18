@@ -1,14 +1,11 @@
-"use client"
-import Image from "next/image";
-import 'bootstrap/dist/css/bootstrap.css';
-import styles from "../page.module.css";
+"use client";
+import "bootstrap/dist/css/bootstrap.css";
 import Main from "@/components/Main";
 import Contact from "@/components/Services";
 import Forms from "@/components/contactform";
 import About from "@/components/About";
 
 import Footer from "@/components/Footer";
-import Copyright from "@/components/Copyright";
 import CustomCursor from "@/components/customcursor";
 export default function Home() {
   return (
@@ -36,14 +33,13 @@ export default function Home() {
         ></img>
       </div>
       <div className="cont">
-      <CustomCursor/>
+        <CustomCursor />
         <Main />
         <About />
         <Contact />
 
         <Forms />
         <Footer />
-
       </div>
     </div>
   );
