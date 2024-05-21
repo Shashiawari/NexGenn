@@ -1,17 +1,51 @@
-// pages/pricing.js
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./pricing.module.css"; // Use CSS module
 import CustomCursor2 from "@/components/customcursor2";
 import Navbar from "@/components/Navbar";
 
 const Pricing = () => {
+  const [email, setEmail] = useState();
+  const [number, setNumber] = useState();
+  const [query, setQuery] = useState();
+  const [sent, setsent] = useState(false);
+  const [errors, setErrors] = useState([]);
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    if (!email || !query || !number) {
+      setErrors(["All fields are necessary."]);
+      return;
+    }
+
+    try {
+      // Proceed with sending email
+      const res = await fetch("/api/pricing", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ number, email, query }),
+      });
+
+      if (res.ok) {
+        const form = event.target;
+        form.reset();
+        setsent(true);
+      } else {
+        console.log("Could not send");
+      }
+    } catch (error) {
+      console.log("Could not send ", error);
+    }
+  }
   return (
     <>
       <CustomCursor2 />
       <Navbar />
       <div className={styles.ser}>
         <div className={styles.hello}>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <h1>EVERYTHING is Negotiable</h1>
             <div
               style={{ display: "flex", flexDirection: "column" }}
@@ -20,7 +54,11 @@ const Pricing = () => {
               <label htmlFor="email" className="mx-2 my-2">
                 Enter your email
               </label>
-              <input id="email" type="email" />
+              <input
+                id="email"
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div
               style={{ display: "flex", flexDirection: "column" }}
@@ -29,14 +67,28 @@ const Pricing = () => {
               <label htmlFor="mobile" className="mx-2 my-2">
                 Enter your mobile number
               </label>
-              <input id="mobile" type="tel" />
+              <input
+                id="mobile"
+                type="tel"
+                onChange={(e) => setNumber(e.target.value)}
+              />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <label htmlFor="desc" className="mx-2 my-2">
                 Enter your query
               </label>
-              <input id="desc" type="text" style={{ height: "200px" }} />
+              <input
+                id="desc"
+                type="text"
+                style={{ height: "200px" }}
+                onChange={(e) => setQuery(e.target.value)}
+              />
             </div>
+            {sent && (
+              <p className="text-center my-3">
+                Sent successfully our executive will contact you soon
+              </p>
+            )}
             <button type="submit">Submit</button>
           </form>
         </div>

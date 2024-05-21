@@ -1,4 +1,4 @@
-import {MongoClient} from "mongodb";
+import { MongoClient } from "mongodb";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
@@ -32,16 +32,21 @@ export const authOptions = {
           return user;
         } catch (error) {
           console.log("Error: ", error);
+          return null;
         }
       },
     }),
   ],
   session: {
     strategy: "jwt",
+    maxAge: 15 * 60,  
+  },
+  jwt: {
+    maxAge: 15 * 60,  
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: "/",
+    signIn: "/",  
   },
 };
 

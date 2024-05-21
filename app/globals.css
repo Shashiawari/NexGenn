@@ -95,13 +95,14 @@ button.navbar-toggler.ml-auto.hidden-sm-up.float-xs-right:focus {
   font-size: 1200px;
   color: #00000099;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1002px) {
   .overlay h1 {
     font-family: lemon_milk_R;
     font-size: 1400px;
     color: #00000099;
   }
 }
+
 .wrapper {
   height: 60vh;
   width: 100%;
@@ -698,12 +699,25 @@ h1 {
   text-align: center;
   color: white;
   overflow-x: hidden;
+  z-index:999 !important;
 }
 
 .foot p {
   text-transform: uppercase;
   padding: 10px;
   border-radius: 30px;
+  color: white;
+}
+
+.foot a{
+  text-decoration: none;
+ color: #be0d36;
+ font-weight: 900;
+}
+
+.foot a:hover{
+ 
+ 
 }
 
 .navbar {
@@ -841,4 +855,9 @@ h1 {
   color: white !important;
   background-color: #000000 !important;
   font-family: lemon_milk_r;
+}
+
+.navbar-nav{
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }

@@ -1,0 +1,35 @@
+.servicesm {
+  background-color: #141528;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.service-conts {
+  z-index: 2;
+  background-color: rgba(199, 17, 75, 0.821);
+  padding: 60px;
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Prevent the custom cursor from overflowing */
+}
+
+.service-conts h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.service-conts p {
+  color: white;
+  font-weight: 200;
+}
+
+.taka {
+  position: fixed;
+  animation: cir 20s infinite ease-in-out;
+
+}
+

@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Copyright from "./Copyright";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -56,8 +57,11 @@ const Footer = () => {
 
               <h1 className="mx-2">NEXGEN</h1>
             </div>
-            <p>FAQ</p>
-            <p>Blog</p>
+            <p><Link href={"/"}>Home</Link></p>
+            <p><Link href={"/services"}>services</Link></p>
+            <p><Link href={"/projects"}>projects</Link></p>
+            <p><Link href={"/pricing"}>pricing</Link></p>
+
           </div>
           <div className="col-12 col-lg-4 col-md-6 my-3">
             <div>
@@ -68,14 +72,12 @@ const Footer = () => {
             <p>carrers</p>
           </div>
           <div className="col-12 col-lg-4 col-md-6 my-3">
-            <h1>Legal</h1>
-            <p>Terms Of use</p>
+            <h1>Contact us</h1>
+            <p style={{fontFamily:"monospace",textTransform:"lowercase"}}>NextGenexperts1.gmail.com</p>
 
-            <p> Privacy Policy</p>
+            <p> +91 9704832432 </p>
 
-            <p> Commertial Art</p>
-
-            <p> Contact Us</p>
+         
           </div>
         </div>
       </div>

@@ -1,0 +1,11 @@
+.rock {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.rock img{
+  margin-top: 10px;
+  transform: rotate(280deg);
+}
