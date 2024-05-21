@@ -13,73 +13,77 @@ const Form = () => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const [sign, setSign] = useState(false);
+  const[loading,setLoading]=useState(false)
 
   async function handleSubmit(event) {
     event.preventDefault();
+    let lowerCaseEmail = email.toLowerCase(); // Convert email to lowercase
+
     if (switchs) {
-      try {
-        const res = await signIn("credentials", {
-          email,
-          password,
-          redirect: false,
-        });
+        try {
+            const res = await signIn("credentials", {
+                email: lowerCaseEmail,
+                password,
+                redirect: false,
+            });
 
-        if (res.error) {
-          setErrors(["Invalid Credentials"]);
-          return;
+            if (res.error) {
+                setErrors(["Invalid Credentials"]);
+                return;
+            }
+            setLoading(true)
+            router.replace("/home");
+        } catch (error) {
+            console.log(error);
         }
-
-        router.replace("/home");
-      } catch (error) {
-        console.log(error);
-      }
     } else {
-      if (!email || !password) {
-        setErrors(["All fields are necessary."]);
-        return;
-      }
-      if (password.length < 8) {
-        setErrors(["Password Should Be atleast 8 Characters"]);
-        return;
-      }
-      try {
-        const resUserExists = await fetch("api/userExist", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        });
-
-        const { exists } = await resUserExists.json();
-
-        if (exists) {
-          setErrors(["User already exists."]);
-          return;
+        if (!lowerCaseEmail || !password) {
+            setErrors(["All fields are necessary."]);
+            return;
         }
-
-        // Proceed with registration
-        const res = await fetch("api/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        });
-
-        if (res.ok) {
-          const form = event.target;
-          form.reset();
-          router.push("/home");
-          setSign(true);
-        } else {
-          console.log("User registration failed.");
+        if (password.length < 8) {
+            setErrors(["Password Should Be at least 8 Characters"]);
+            return;
         }
-      } catch (error) {
-        console.log("Error during registration: ", error);
-      }
+        try {
+            const resUserExists = await fetch("api/userExist", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email: lowerCaseEmail }),
+            });
+
+            const { exists } = await resUserExists.json();
+
+            if (exists) {
+                setErrors(["User already exists."]);
+                return;
+            }
+
+            // Proceed with registration
+            const res = await fetch("api/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email: lowerCaseEmail, password }),
+            });
+
+            if (res.ok) {
+                const form = event.target;
+                form.reset();
+                router.push("/home");
+                setSign(true);
+            } else {
+                console.log("User registration failed.");
+            }
+        } catch (error) {
+            console.log("Error during registration: ", error);
+        }
     }
-  }
+}
+
 
   return (
     <div>
@@ -136,7 +140,9 @@ const Form = () => {
                         ))}
                       </ul>
                     )}
+
                     {sign?<p>Registration Successful Kindly login</p>:""}
+                    {loading&&<p>Loading....</p>}
                     <button className="flip-card__btn" type="submit">
                       {switchs ? "Let`s go!" : "Confirm!"}
                     </button>
