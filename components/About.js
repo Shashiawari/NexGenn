@@ -4,9 +4,9 @@ const About = () => {
   return (
     <div className="about my-5 mx-3 row">
     <div className="about-cont my-3 col-12 col-lg-4 col-md-6 ">
-    <h2>Welcome to WebWise Works</h2>
+    <h2>Welcome to NexGen</h2>
     <hr></hr>
-    <p>At WebWise Works, we're dedicated to empowering individuals and businesses to thrive online with our personalized website solutions. With a commitment to excellence and affordability, we provide round-the-clock support and tailor-made applications designed to elevate your online presence.</p>
+    <p>At WebWise NexGen, we're dedicated to empowering individuals and businesses to thrive online with our personalized website solutions. With a commitment to excellence and affordability, we provide round-the-clock support and tailor-made applications designed to elevate your online presence.</p>
 </div>
 
 <div className="about-cont col-12 col-lg-4 col-md-6 ">
@@ -18,7 +18,7 @@ const About = () => {
 <div className="about-cont my-3 col-12 col-lg-4 col-md-6 ">
     <h2>Personalized Applications, Professional Results</h2>
     <hr></hr>
-    <p>At WebWise Works, we believe that your website should be as unique as you are. That's why we offer personalized applications that are tailored to your specific needs and goals. Whether you're launching a new business, showcasing your portfolio, or selling products online, we have the expertise to bring your vision to life.</p>
+    <p>At NexGen, we believe that your website should be as unique as you are. That's why we offer personalized applications that are tailored to your specific needs and goals. Whether you're launching a new business, showcasing your portfolio, or selling products online, we have the expertise to bring your vision to life.</p>
 </div>
 
 <div className="about-cont my-3 col-12 col-lg-4 col-md-6 ">
@@ -30,7 +30,7 @@ const About = () => {
 <div className="about-cont my-3 col-12 col-lg-4 col-md-6 ">
     <h2>Affordable Solutions for Every Budget</h2>
     <hr></hr>
-    <p>We believe that everyone deserves access to high-quality website solutions without breaking the bank. That's why we offer competitive pricing and flexible payment options to accommodate budgets of all sizes. With WebWise Works, you can rest assured that you're getting top-notch service at a price that won't break the bank.</p>
+    <p>We believe that everyone deserves access to high-quality website solutions without breaking the bank. That's why we offer competitive pricing and flexible payment options to accommodate budgets of all sizes. With NexGen, you can rest assured that you're getting top-notch service at a price that won't break the bank.</p>
 </div>
 
 <div className="about-cont my-3 col-12 col-lg-4 col-md-6 ">

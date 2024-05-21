@@ -76,7 +76,7 @@ const page = () => {
               className="img-fluid"
               alt="img"
             ></img>
-            <p className="mt-3">Buisness</p>
+            <p className="mt-3">Business</p>
           </div>
           <div className="card card-3">
             <img

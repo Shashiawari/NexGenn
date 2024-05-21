@@ -101,8 +101,8 @@ height: 100vh;
   .projects-list .card{
     background-color: rgb(241, 241, 243);
     font-family: lemon_milk_l;
-    padding: 40px;
-    border-radius: 40px;
+    padding: 20px;
+    border-radius: 60px;
     border: 4px solid rgb(108, 105, 215);
     display: flex;
     justify-content: center;
