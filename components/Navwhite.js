@@ -77,6 +77,11 @@ const Navwhite = () => {
                   pricing
                 </Link>
               </li>
+              <li className="nav-item">
+              <Link className="nav-link text-white " href={"/dev"}>
+               Developers
+              </Link>
+            </li>
             </ul>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <Button />

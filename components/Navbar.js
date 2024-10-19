@@ -81,6 +81,11 @@ const Navbar = () => {
                 pricing
               </Link>
             </li>
+            <li className="nav-item">
+            <Link className="nav-link " href={"/dev"}>
+             Developers
+            </Link>
+          </li>
           </ul>
           <div style={{ display: "flex", justifyContent: "center" ,backdropFilter:"blur(10px)"}}>
             <Button />
