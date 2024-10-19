@@ -1,0 +1,82 @@
+
+  .card{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-name {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .card-domain,
+  .card-experience {
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .card-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .card-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .card-link:hover {
+    text-decoration: underline;
+  }
+  
+  button{
+    background-color: rgb(236, 167, 219);
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  /* From Uiverse.io by ernestnash */ 
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(232, 135, 135);
+    border: 3px solid rgb(252, 70, 100);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    margin-top: 5px;
+    text-transform: uppercase;
+   }
+   
+   .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 70, 100);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+   }
+   
+   .btn:hover::before {
+    transform: translateX(0);
+   }
+
+     
+  
